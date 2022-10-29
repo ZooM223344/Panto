@@ -454,10 +454,9 @@ body._lock {
 /*=============================================*/
 
 .no-webp .body{
-  background: url("../../img/body-photo.png") no-repeat center top; }
+  background: url("../img/body-photo.png") no-repeat center top/cover; }
 
 .body {
-  background-size: cover;
   padding-top: 16rem;
   padding-bottom: 50rem;
   position: relative;
@@ -1126,7 +1125,7 @@ body._lock {
 }
 
 .Reviews__content::before {
-  content: url("../../img/Reviews__small-photo1.svg");
+  content: url("../img/Reviews__small-photo1.svg");
   display: block;
   background-color: #ffffff;
   position: absolute;
@@ -1325,6 +1324,10 @@ body._lock {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   }
 
+  .nav._active-scroll {
+    background-color: #FFFFFF;
+  }
+
   .nav._active::before {
     content: "";
     position: fixed;
@@ -1334,6 +1337,10 @@ body._lock {
     height: 110px;
     background-color: rgb(40, 42, 44);
     z-index: 2;
+  }
+
+  .nav._active-scroll._active::before {
+    background-color: #ffffff;
   }
 
   .nav ul {
@@ -1422,6 +1429,11 @@ body._lock {
     margin-top: 5rem;
   }
 
+  .Worcks-block__photo {
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
   .Worcks-block__decor-big,
   .Worcks-block__decor-smoll {
     display: none;
@@ -1444,6 +1456,12 @@ body._lock {
 
   .Worcks-block-two__image {
     margin-left: 0;
+  }
+
+  .Worcks__block-two__photo-one {
+    overflow: hidden;
+    border-radius: 2rem;
+    padding-bottom: 0;
   }
 
   .Reviews {
@@ -1561,6 +1579,6 @@ body._lock {
   }
 }
 
-.webp .body{ background: url(../../img/body-photo.webp) no-repeat center top; }
+.webp .body{ background: url(../img/body-photo.webp) no-repeat center top/cover; }
 
 .webp .Worcks-block__blur{ background: url(interior-light-room-with-sofa-empty-dark-blue-wall-3d-rendering.webp); }
